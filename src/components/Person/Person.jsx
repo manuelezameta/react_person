@@ -3,7 +3,7 @@ import './Person.scss';
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  const partnerLabel = `${sex === 'm' ? 'wife' : 'husband'}`;
+  const partnerLabel = sex === 'm' ? 'wife' : 'husband';
 
   const marriageStatus = isMarried
     ? `${partnerName} is my ${partnerLabel}`
